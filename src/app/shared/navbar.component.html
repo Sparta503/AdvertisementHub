@@ -1,16 +1,62 @@
-<nav class="bg-blue-600 text-white shadow-lg">
-  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+<header class="bg-white shadow-md sticky top-0 z-50">
+  <nav class="max-w-7xl mx-auto px-6 py-4">
+    
+    <div class="flex items-center justify-between">
+      
+      <!-- Logo -->
+      <div class="flex items-center space-x-2">
+        <div class="bg-blue-600 text-white px-3 py-1 rounded-lg font-bold">
+          HC
+        </div>
+        <h1 class="text-2xl font-bold">
+          AdvertisementHub
+        </h1>
+      </div>
 
-    <h1 class="text-2xl font-bold">
-      AdvertisementHub
-    </h1>
+      <!-- Desktop Menu -->
+      <ul class="hidden md:flex items-center space-x-8 text-gray-700 font-medium">
+        <li><a routerLink="/" class="hover:text-blue-600 transition">Home</a></li>
+        <li><a routerLink="/about" class="hover:text-blue-600 transition">About</a></li>
+        <li><a routerLink="/doctors" class="hover:text-blue-600 transition">Doctors</a></li>
+        <li><a routerLink="/services" class="hover:text-blue-600 transition">Services</a></li>
+        <li><a routerLink="/contact" class="hover:text-blue-600 transition">Contact</a></li>
+      </ul>
 
-    <ul class="flex gap-8 font-medium">
-      <li><a routerLink="/" class="hover:text-gray-200">Home</a></li>
-      <li><a routerLink="/services" class="hover:text-gray-200">Services</a></li>
-      <li><a routerLink="/pricing" class="hover:text-gray-200">Pricing</a></li>
-      <li><a routerLink="/contact" class="hover:text-gray-200">Contact</a></li>
-    </ul>
+      <!-- Appointment Button -->
+      <div class="hidden md:block">
+        <button (click)="openModal()" class="bg-blue-600 text-white px-5 py-2 rounded-lg font-medium hover:bg-blue-700 transition">
+          Book Appointment
+        </button>
+      </div>
 
-  </div>
-</nav>
+      <!-- Mobile Menu Button -->
+      <button
+        class="md:hidden text-gray-700"
+        (click)="toggleMenu()"
+      >
+        ☰
+      </button>
+
+    </div>
+
+    <!-- Mobile Menu -->
+    <div *ngIf="menuOpen" class="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg">
+      <ul class="flex flex-col space-y-2 p-4">
+        <li><a routerLink="/" class="block py-2 hover:text-blue-600" (click)="menuOpen = false">Home</a></li>
+        <li><a routerLink="/about" class="block py-2 hover:text-blue-600" (click)="menuOpen = false">About</a></li>
+        <li><a routerLink="/doctors" class="block py-2 hover:text-blue-600" (click)="menuOpen = false">Doctors</a></li>
+        <li><a routerLink="/services" class="block py-2 hover:text-blue-600" (click)="menuOpen = false">Services</a></li>
+        <li><a routerLink="/contact" class="block py-2 hover:text-blue-600" (click)="menuOpen = false">Contact</a></li>
+        <li><button (click)="openModal(); menuOpen = false" class="block py-2 text-blue-600">Book Appointment</button></li>
+      </ul>
+      <a routerLink="/contact" class="block">Contact</a>
+
+      <a routerLink="/appointment"
+         class="block bg-blue-600 text-white px-4 py-2 rounded-lg text-center">
+         Book Appointment
+      </a>
+
+    </div>
+
+  </nav>
+</header>
