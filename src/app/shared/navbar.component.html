@@ -1,37 +1,46 @@
-<header class="bg-white shadow-md sticky top-0 z-50">
-  <nav class="max-w-7xl mx-auto px-6 py-4">
-    
-    <div class="flex items-center justify-between">
+<header class="bg-white">
+  <!-- Top Contact Bar -->
+  <div class="bg-blue-600 py-2">
+    <div class="container mx-auto px-6 flex justify-between items-center text-sm text-white">
+      <span>Contact us: info@advertisementhub.com</span>
+      <span>Phone: +1 234 567 890</span>
+    </div>
+  </div>
+
+  <nav class="bg-blue-600 rounded-3xl container mx-auto px-6 py-4 mt-4 mb-4">
+    <div class="flex items-center">
       
       <!-- Logo -->
       <div class="flex items-center space-x-2">
-        <div class="bg-blue-600 text-white px-3 py-1 rounded-lg font-bold">
+        <div class="bg-white text-blue-600 px-3 py-1 rounded-lg font-bold">
           HC
         </div>
-        <h1 class="text-2xl font-bold">
+        <h1 class="text-2xl font-bold text-white">
           AdvertisementHub
         </h1>
       </div>
 
-      <!-- Desktop Menu -->
-      <ul class="hidden md:flex items-center space-x-8 text-gray-700 font-medium">
-        <li><a routerLink="/" class="hover:text-blue-600 transition">Home</a></li>
-        <li><a routerLink="/about" class="hover:text-blue-600 transition">About</a></li>
-        <li><a routerLink="/doctors" class="hover:text-blue-600 transition">Doctors</a></li>
-        <li><a routerLink="/services" class="hover:text-blue-600 transition">Services</a></li>
-        <li><a routerLink="/contact" class="hover:text-blue-600 transition">Contact</a></li>
-      </ul>
+      <!-- Desktop Menu (Centered) -->
+      <div class="flex-1 flex justify-center">
+        <ul class="hidden md:flex items-center space-x-8 text-white font-medium">
+          <li><a routerLink="/" class="bg-black text-white transition px-3 py-2 rounded-lg hover:text-white hover:animate-pulse hover:shadow-2xl hover:scale-95 hover:border-b-2 hover:border-white active:scale-95">Home</a></li>
+          <li><a routerLink="/about" class="bg-black text-white transition px-3 py-2 rounded-lg hover:text-white hover:animate-pulse hover:shadow-2xl hover:scale-95 hover:border-b-2 hover:border-white active:scale-95">About</a></li>
+          <li><a routerLink="/doctors" class="bg-black text-white transition px-3 py-2 rounded-lg hover:text-white hover:animate-pulse hover:shadow-2xl hover:scale-95 hover:border-b-2 hover:border-white active:scale-95">Doctors</a></li>
+          <li><a routerLink="/services" class="bg-black text-white transition px-3 py-2 rounded-lg hover:text-white hover:animate-pulse hover:shadow-2xl hover:scale-95 hover:border-b-2 hover:border-white active:scale-95">Services</a></li>
+          <li><a routerLink="/contact" class="bg-black text-white transition px-3 py-2 rounded-lg hover:text-white hover:animate-pulse hover:shadow-2xl hover:scale-95 hover:border-b-2 hover:border-white active:scale-95">Contact</a></li>
+        </ul>
+      </div>
 
       <!-- Appointment Button -->
       <div class="hidden md:block">
-        <button (click)="openModal()" class="bg-blue-600 text-white px-5 py-2 rounded-lg font-medium hover:bg-blue-700 transition">
+        <button (click)="openModal()" class="bg-white text-blue-600 px-5 py-2 rounded-lg font-medium hover:bg-black hover:text-white hover:scale-105 hover:shadow-lg transition">
           Book Appointment
         </button>
       </div>
 
       <!-- Mobile Menu Button -->
       <button
-        class="md:hidden text-gray-700"
+        class="md:hidden text-white ml-4 hover:bg-black hover:scale-105 hover:shadow-lg"
         (click)="toggleMenu()"
       >
         ☰
@@ -42,20 +51,13 @@
     <!-- Mobile Menu -->
     <div *ngIf="menuOpen" class="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg">
       <ul class="flex flex-col space-y-2 p-4">
-        <li><a routerLink="/" class="block py-2 hover:text-blue-600" (click)="menuOpen = false">Home</a></li>
-        <li><a routerLink="/about" class="block py-2 hover:text-blue-600" (click)="menuOpen = false">About</a></li>
-        <li><a routerLink="/doctors" class="block py-2 hover:text-blue-600" (click)="menuOpen = false">Doctors</a></li>
-        <li><a routerLink="/services" class="block py-2 hover:text-blue-600" (click)="menuOpen = false">Services</a></li>
-        <li><a routerLink="/contact" class="block py-2 hover:text-blue-600" (click)="menuOpen = false">Contact</a></li>
-        <li><button (click)="openModal(); menuOpen = false" class="block py-2 text-blue-600">Book Appointment</button></li>
+        <li><a routerLink="/" class="bg-black text-white transition px-3 py-2 rounded-lg hover:text-white hover:animate-pulse hover:shadow-2xl hover:scale-95 hover:border-b-2 hover:border-white active:scale-95" (click)="menuOpen = false">Home</a></li>
+        <li><a routerLink="/about" class="bg-black text-white transition px-3 py-2 rounded-lg hover:text-white hover:animate-pulse hover:shadow-2xl hover:scale-95 hover:border-b-2 hover:border-white active:scale-95" (click)="menuOpen = false">About</a></li>
+        <li><a routerLink="/doctors" class="bg-black text-white transition px-3 py-2 rounded-lg hover:text-white hover:animate-pulse hover:shadow-2xl hover:scale-95 hover:border-b-2 hover:border-white active:scale-95" (click)="menuOpen = false">Doctors</a></li>
+        <li><a routerLink="/services" class="bg-black text-white transition px-3 py-2 rounded-lg hover:text-white hover:animate-pulse hover:shadow-2xl hover:scale-95 hover:border-b-2 hover:border-white active:scale-95" (click)="menuOpen = false">Services</a></li>
+        <li><a routerLink="/contact" class="bg-black text-white transition px-3 py-2 rounded-lg hover:text-white hover:animate-pulse hover:shadow-2xl hover:scale-95 hover:border-b-2 hover:border-white active:scale-95" (click)="menuOpen = false">Contact</a></li>
+        <li><button (click)="openModal(); menuOpen = false" class="block py-2 text-blue-600 hover:bg-black hover:text-white hover:scale-105 hover:shadow-lg transition">Book Appointment</button></li>
       </ul>
-      <a routerLink="/contact" class="block">Contact</a>
-
-      <a routerLink="/appointment"
-         class="block bg-blue-600 text-white px-4 py-2 rounded-lg text-center">
-         Book Appointment
-      </a>
-
     </div>
 
   </nav>
