@@ -81,59 +81,128 @@
   </div>
 </section>
 
-<section class="py-20 bg-gradient-to-r from-blue-600 to-blue-800 min-h-[25vh] flex items-center">
-  <div class="container mx-auto px-6 w-full">
-    <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-white">What Our Clients Say</h2>
-    <div class="relative overflow-hidden rounded-3xl p-8 shadow-lg min-h-[400px] flex items-center w-full bg-transparent">
-      <div class="testimonials-container flex transition-transform duration-1000 ease-in-out w-full" style="width: 300%; animation: slide 18s infinite;">
-        <div class="testimonial w-1/3 flex-shrink-0 p-6 text-white text-center">
-          <div class="bg-black rounded-2xl p-6 h-full flex flex-col justify-center">
-            <p class="text-lg mb-4">"AdvertisementHub transformed our online presence. Sales increased by 40% in just three months!"</p>
-            <p class="font-semibold">- Jane Doe, CEO of TechStart</p>
-          </div>
-        </div>
-        <div class="testimonial w-1/3 flex-shrink-0 p-6 text-white text-center">
-          <div class="bg-black rounded-2xl p-6 h-full flex flex-col justify-center">
-            <p class="text-lg mb-4">"Their strategies are top-notch. Highly recommend for any business looking to grow."</p>
-            <p class="font-semibold">- John Smith, Founder of GreenEco</p>
-          </div>
-        </div>
-        <div class="testimonial w-1/3 flex-shrink-0 p-6 text-white text-center">
-          <div class="bg-black rounded-2xl p-6 h-full flex flex-col justify-center">
-            <p class="text-lg mb-4">"Professional and results-oriented. Our ROI doubled thanks to their expertise."</p>
-            <p class="font-semibold">- Emily Johnson, Marketing Director at InnovateCorp</p>
-          </div>
-        </div>
-        <div class="testimonial w-1/3 flex-shrink-0 p-6 text-white text-center">
-          <div class="bg-black rounded-2xl p-6 h-full flex flex-col justify-center">
-            <p class="text-lg mb-4">"Excellent service and support. They truly understand business needs."</p>
-            <p class="font-semibold">- Michael Brown, Owner of LocalShop</p>
-          </div>
-        </div>
-        <div class="testimonial w-1/3 flex-shrink-0 p-6 text-white text-center">
-          <div class="bg-black rounded-2xl p-6 h-full flex flex-col justify-center">
-            <p class="text-lg mb-4">"AdvertisementHub transformed our online presence. Sales increased by 40% in just three months!"</p>
-            <p class="font-semibold">- Jane Doe, CEO of TechStart</p>
-          </div>
-        </div>
-        <div class="testimonial w-1/3 flex-shrink-0 p-6 text-white text-center">
-          <div class="bg-black rounded-2xl p-6 h-full flex flex-col justify-center">
-            <p class="text-lg mb-4">"Their strategies are top-notch. Highly recommend for any business looking to grow."</p>
-            <p class="font-semibold">- John Smith, Founder of GreenEco</p>
-          </div>
-        </div>
+<section class="py-20 bg-gradient-to-r from-blue-600 to-blue-800 overflow-hidden">
+
+  <h2 class="text-4xl font-bold text-white text-center mb-12">
+    What Our Clients Say
+  </h2>
+
+  <div class="relative w-full overflow-hidden h-64">
+
+    <div class="flex animate-scroll gap-8" style="width: calc(14 * 336px + 13 * 32px);">
+
+      <!-- first set of testimonials -->
+      <div class="bg-black text-white rounded-2xl p-6 w-80 shadow-lg flex-shrink-0">
+        <p class="mb-4">
+          "AdvertisementHub transformed our online presence. Sales increased by 40%."
+        </p>
+        <p class="font-semibold text-blue-400">Jane Doe - TechStart</p>
       </div>
+
+      <div class="bg-black text-white rounded-2xl p-6 w-80 shadow-lg flex-shrink-0">
+        <p class="mb-4">
+          "Their strategies are top-notch. Highly recommend for business growth."
+        </p>
+        <p class="font-semibold text-blue-400">John Smith - GreenEco</p>
+      </div>
+
+      <div class="bg-black text-white rounded-2xl p-6 w-80 shadow-lg flex-shrink-0">
+        <p class="mb-4">
+          "Professional and results-oriented. Our ROI doubled."
+        </p>
+        <p class="font-semibold text-blue-400">Emily Johnson - InnovateCorp</p>
+      </div>
+
+      <div class="bg-black text-white rounded-2xl p-6 w-80 shadow-lg flex-shrink-0">
+        <p class="mb-4">
+          "Excellent service and support. They truly understand business needs."
+        </p>
+        <p class="font-semibold text-blue-400">Michael Brown - LocalShop</p>
+      </div>
+
+      <div class="bg-black text-white rounded-2xl p-6 w-80 shadow-lg flex-shrink-0">
+        <p class="mb-4">
+          "Outstanding results with their digital marketing campaigns."
+        </p>
+        <p class="font-semibold text-blue-400">Sarah Wilson - RetailPlus</p>
+      </div>
+
+      <div class="bg-black text-white rounded-2xl p-6 w-80 shadow-lg flex-shrink-0">
+        <p class="mb-4">
+          "Transformed our brand visibility in just 6 months. Incredible team!"
+        </p>
+        <p class="font-semibold text-blue-400">David Chen - StartupTech</p>
+      </div>
+
+      <div class="bg-black text-white rounded-2xl p-6 w-80 shadow-lg flex-shrink-0">
+        <p class="mb-4">
+          "Best investment we've made. Customer acquisition tripled."
+        </p>
+        <p class="font-semibold text-blue-400">Lisa Rodriguez - FashionHub</p>
+      </div>
+
+      <!-- duplicated testimonials for seamless infinite loop -->
+      <div class="bg-black text-white rounded-2xl p-6 w-80 shadow-lg flex-shrink-0">
+        <p class="mb-4">
+          "AdvertisementHub transformed our online presence. Sales increased by 40%."
+        </p>
+        <p class="font-semibold text-blue-400">Jane Doe - TechStart</p>
+      </div>
+
+      <div class="bg-black text-white rounded-2xl p-6 w-80 shadow-lg flex-shrink-0">
+        <p class="mb-4">
+          "Their strategies are top-notch. Highly recommend for business growth."
+        </p>
+        <p class="font-semibold text-blue-400">John Smith - GreenEco</p>
+      </div>
+
+      <div class="bg-black text-white rounded-2xl p-6 w-80 shadow-lg flex-shrink-0">
+        <p class="mb-4">
+          "Professional and results-oriented. Our ROI doubled."
+        </p>
+        <p class="font-semibold text-blue-400">Emily Johnson - InnovateCorp</p>
+      </div>
+
+      <div class="bg-black text-white rounded-2xl p-6 w-80 shadow-lg flex-shrink-0">
+        <p class="mb-4">
+          "Excellent service and support. They truly understand business needs."
+        </p>
+        <p class="font-semibold text-blue-400">Michael Brown - LocalShop</p>
+      </div>
+
+      <div class="bg-black text-white rounded-2xl p-6 w-80 shadow-lg flex-shrink-0">
+        <p class="mb-4">
+          "Outstanding results with their digital marketing campaigns."
+        </p>
+        <p class="font-semibold text-blue-400">Sarah Wilson - RetailPlus</p>
+      </div>
+
+      <div class="bg-black text-white rounded-2xl p-6 w-80 shadow-lg flex-shrink-0">
+        <p class="mb-4">
+          "Transformed our brand visibility in just 6 months. Incredible team!"
+        </p>
+        <p class="font-semibold text-blue-400">David Chen - StartupTech</p>
+      </div>
+
+      <div class="bg-black text-white rounded-2xl p-6 w-80 shadow-lg flex-shrink-0">
+        <p class="mb-4">
+          "Best investment we've made. Customer acquisition tripled."
+        </p>
+        <p class="font-semibold text-blue-400">Lisa Rodriguez - FashionHub</p>
+      </div>
+
     </div>
+
   </div>
+
   <style>
-    @keyframes slide {
+    @keyframes scroll {
       0% { transform: translateX(0); }
-      16.67% { transform: translateX(-16.67%); }
-      33.33% { transform: translateX(-33.33%); }
-      50% { transform: translateX(-50%); }
-      66.67% { transform: translateX(-66.67%); }
-      83.33% { transform: translateX(-83.33%); }
-      100% { transform: translateX(-100%); }
+      100% { transform: translateX(calc(-50%)); }
+    }
+    .animate-scroll {
+      animation: scroll 35s linear infinite;
     }
   </style>
+
 </section>
