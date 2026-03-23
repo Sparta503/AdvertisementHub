@@ -20,7 +20,7 @@
             "outputPath": "dist/hospital-advertisement",
             "index": "src/index.html",
             "main": "src/main.ts",
-            "polyfills": "src/polyfills.ts",
+            "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
@@ -44,13 +44,11 @@
               ],
               "optimization": true,
               "outputHashing": "all",
-              "sourceMap": false,
-              "extractCss": true
+              "sourceMap": false
             },
             "development": {
               "optimization": false,
-              "sourceMap": true,
-              "extractCss": false
+              "sourceMap": true
             }
           },
           "defaultConfiguration": "production"
